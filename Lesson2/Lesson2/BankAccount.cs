@@ -8,17 +8,33 @@ namespace Lesson2
 {
     public class BankAccount
     {
-        private string _accountNumber;
+        private static long counter;
+        private long _accountNumber;
         private decimal _balance;
         public enum _AccountType
         {
-            Debit,
+            Debit = 1,
             Credit,
             Saving
         }
         private _AccountType _accountType;
 
-        public string AccountNumber
+        public BankAccount(long accountNumber)
+        {
+            AccountNumber = accountNumber;
+        }
+
+        public BankAccount(decimal balance)
+        {
+            Balance = balance;
+        }
+
+        public BankAccount(_AccountType accountType)
+        {
+            AccountType = accountType;
+        }
+
+        public long AccountNumber
         { 
             get { return _accountNumber; } 
             set { _accountNumber = value; }
