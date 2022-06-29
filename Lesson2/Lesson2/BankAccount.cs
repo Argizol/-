@@ -34,6 +34,29 @@ namespace Lesson2
             AccountType = accountType;
         }
 
+        public BankAccount(long accountNumber, decimal balance, _AccountType accountType) : this(accountNumber)
+        {
+            Balance = balance;
+            AccountType = accountType;
+        }
+
+        public decimal TakeMoney(decimal sum)
+        {
+            if (_balance > sum)
+            {
+                _balance = _balance - sum;
+                return _balance;
+            }                
+            Console.WriteLine("На счете недостаточно средств \n");
+            return -1;
+        }
+
+        public decimal PushMoney(decimal sum)
+        {
+            _balance = _balance + sum;
+            return _balance + sum;
+        }
+
         public long AccountNumber
         { 
             get { return _accountNumber; } 
