@@ -12,5 +12,10 @@ namespace Lesson2
         {
             Console.WriteLine("На счете недостаточно средств \n");
         }
+
+        public static void PrintReverseWord(string word)
+        {
+            Console.WriteLine($"{Reverse.ReverseWord(word)} \n");
+        }
     }
 }
