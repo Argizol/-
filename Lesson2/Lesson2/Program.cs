@@ -14,15 +14,13 @@ Printer.PrintReverseWord(word);
 
 
 string path = "C:/Homeworks/Текстовый документ.txt";
-StreamReader sr = new StreamReader(path);
-StreamWriter sw = new StreamWriter(@"C:/Homeworks/Emails.txt");
+using StreamReader sr = new StreamReader(path);
+using StreamWriter sw = new StreamWriter(@"C:/Homeworks/Emails.txt");
 while (!sr.EndOfStream)
 {
     string line = sr.ReadLine();    
     Console.WriteLine(TextFileWork.GetEmail(ref line));
     sw.WriteLine(TextFileWork.GetEmail(ref line));
 }
-sr.Close();
-sw.Close();
 
 Console.ReadLine();
