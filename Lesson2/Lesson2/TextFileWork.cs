@@ -17,7 +17,7 @@ namespace Lesson2
                 strings[i] = strings[i].Trim();
                 if (strings[i].Contains<char>('@'))
                 {
-                    stringBuilder.Append(strings[i]).Append("\n");
+                    stringBuilder.Append(strings[i]);
                 }
             }
             return words = stringBuilder.ToString();
