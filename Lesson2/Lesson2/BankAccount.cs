@@ -46,9 +46,24 @@ namespace Lesson2
             {
                 _balance = _balance - sum;
                 return _balance;
-            }                
-            Console.WriteLine("На счете недостаточно средств \n");
+            }
+            Printer.PrintNoMoney();
             return -1;
+        }
+
+        public void TransferMoney(ref BankAccount from, decimal sum)
+        {
+            if(sum > from._balance)
+            {
+                Printer.PrintNoMoney();
+                return;                
+            }
+            else
+            {
+                from.TakeMoney(sum);
+            }
+            
+            this._balance += sum;
         }
 
         public decimal PushMoney(decimal sum)
