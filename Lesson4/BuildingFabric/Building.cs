@@ -53,11 +53,7 @@
 
         public int GenerateBuildingNumber()
         {
-<<<<<<< HEAD
             counter++;
-=======
-            counter = counter + 1;
->>>>>>> master
             this.BuildingID = counter;
             return this.BuildingID;
         }
