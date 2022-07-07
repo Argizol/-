@@ -4,7 +4,7 @@ namespace BuildingFabric
 {
     internal class CreaterBuildingTypeA : Creator
     {
-        internal override void CreateBuilding(
+        internal override Building CreateBuilding(
             int BuildingHeight,
             int AmountsOfFloor,
             int AppartmentNumbers,
@@ -15,7 +15,7 @@ namespace BuildingFabric
                 AmountsOfFloor,
                 AppartmentNumbers,
                 AmountsOfEntrance);
-            hashtable.Add(building.BuildingID,building);
+            return building;
         }
     }
 }

@@ -4,7 +4,7 @@ namespace BuildingFabric
     internal abstract class Creator
     {
         internal static Hashtable hashtable = new();
-        internal abstract void CreateBuilding(
+        internal abstract Building CreateBuilding(
             int BuildingHeight,
             int AmountsOfFloor,
             int AppartmentNumbers,
