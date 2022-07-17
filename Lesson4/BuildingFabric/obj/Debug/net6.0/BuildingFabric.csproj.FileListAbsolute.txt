@@ -1,0 +1,12 @@
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\obj\Debug\net6.0\BuildingFabric.csproj.AssemblyReference.cache
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\obj\Debug\net6.0\BuildingFabric.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\obj\Debug\net6.0\BuildingFabric.AssemblyInfoInputs.cache
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\obj\Debug\net6.0\BuildingFabric.AssemblyInfo.cs
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\obj\Debug\net6.0\BuildingFabric.csproj.CoreCompileInputs.cache
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\bin\Debug\net6.0\BuildingFabric.deps.json
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\bin\Debug\net6.0\BuildingFabric.dll
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\bin\Debug\net6.0\BuildingFabric.pdb
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\obj\Debug\net6.0\BuildingFabric.dll
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\obj\Debug\net6.0\refint\BuildingFabric.dll
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\obj\Debug\net6.0\BuildingFabric.pdb
+C:\Users\argiz\source\repos\Geekbrains\-\Lesson4\BuildingFabric\obj\Debug\net6.0\ref\BuildingFabric.dll
