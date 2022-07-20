@@ -16,6 +16,7 @@ namespace BuildingFabric
                 AppartmentNumbers,
                 AmountsOfEntrance);
             return building;
+
         }
     }
 }

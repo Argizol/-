@@ -6,6 +6,7 @@ namespace BuildingFabric
         public static void Run()
         {
             var createrA = new CreaterBuildingTypeA();
+
             var house1 = createrA.CreateBuilding(30, 15, 200, 4);
             var house2 = createrA.CreateBuilding(30, 15, 200, 4);
             var house3 = createrA.CreateBuilding(30, 15, 200, 4);
@@ -16,15 +17,12 @@ namespace BuildingFabric
             Creator.hashtable.Add(house4.BuildingID, house4);
 
             Console.WriteLine($"{Creator.hashtable.Count}");
-
             foreach (var item in Creator.hashtable.Values)
             {
                 Console.WriteLine($"{((Building)item).BuildingID} {((Building)item).AppartmentNumbers}");
             }
             Creator.hashtable.Remove(2);
-
             Console.WriteLine();
-
             foreach (var item in Creator.hashtable.Values)
             {
                 Console.WriteLine($"{((Building)item).BuildingID} {((Building)item).AppartmentNumbers}");

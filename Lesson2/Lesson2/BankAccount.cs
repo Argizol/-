@@ -11,6 +11,23 @@ namespace Lesson2
         private static long counter;
         private long _accountNumber;
         private decimal _balance;
+        public long AccountNumber
+        {
+            get { return _accountNumber; }
+            set { _accountNumber = value; }
+        }
+
+        public decimal Balance
+        {
+            get { return _balance; }
+            set { _balance = value; }
+        }
+
+        public _AccountType AccountType
+        {
+            get { return _accountType; }
+            set { _accountType = value; }
+        }
         public enum _AccountType
         {
             Debit = 1,
@@ -46,8 +63,9 @@ namespace Lesson2
             {
                 _balance = _balance - sum;
                 return _balance;
-            }
+
             Printer.PrintNoMoney();
+
             return -1;
         }
 
@@ -72,21 +90,50 @@ namespace Lesson2
             return _balance + sum;
         }
 
-        public long AccountNumber
-        { 
-            get { return _accountNumber; } 
-            set { _accountNumber = value; }
-        }
-
-        public decimal Balance
+        public override bool Equals(object? obj)
         {
-            get { return _balance; }
-            set { _balance = value; }
+            if (obj is null) return false;
+
+            if (obj is string)
+            {
+                var str = (string)obj;
+                if (!str.Contains($"Номер счета: {AccountNumber}")) return false;
+                if (!str.Contains($"Баланс: {Balance}")) return false;
+                if (!str.Contains($"Тип счета: {AccountType}")) return false;
+                return true;
+            }
+
+            if (obj.GetType() != typeof(BankAccount)) return false;
+
+            var other = (BankAccount)obj;
+
+            return AccountNumber == other.AccountNumber
+                && Balance == other.Balance
+                && AccountType == other.AccountType;
         }
 
-        public _AccountType AccountType
-        { get { return _accountType;}
-          set { _accountType = value; }
+        public static bool operator ==(BankAccount a, BankAccount b) { return (a.AccountNumber == b.AccountNumber) && (a.Balance == b.Balance) && (a.AccountType == b.AccountType); }
+        public static bool operator !=(BankAccount a, BankAccount b) { return !(a == b); }
+
+        public override int GetHashCode()
+        {
+           var hash = 521;
+
+            unchecked
+            {
+                hash = (hash * 0x18d) ^ AccountNumber.GetHashCode();
+                hash = (hash * 0x18d) ^ Balance.GetHashCode();
+                hash = (hash * 0x18d) ^ AccountType.GetHashCode();               
+            }
+
+            return hash;
+        }
+
+        public override string? ToString()
+        {
+            return $"Номер счета: {AccountNumber}\n" +
+                   $"Баланс: {Balance}\n" +
+                   $"Тип счета: {AccountType}\n";
         }
     }
 }
