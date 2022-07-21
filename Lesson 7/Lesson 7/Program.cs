@@ -2,13 +2,13 @@
 
 using Lesson_7;
 
-char[] alfabet = { 
+char[] alfabet = {
     'а', 'б', 'в', 'г', 'д',
     'е', 'ё', 'ж', 'з', 'и',
     'й', 'к', 'л', 'м', 'н',
     'о', 'п', 'р', 'с', 'т',
     'у', 'ф', 'х', 'ц', 'ч',
-    'ш', 'щ', 'ъ', 'ы', 'ь', 
+    'ш', 'щ', 'ъ', 'ы', 'ь',
     'э', 'ю', 'я' };
 
 Console.WriteLine("Введите строку на русском языке");
@@ -16,17 +16,32 @@ string str = Console.ReadLine().ToLower();
 
 CodeA codeA = new();
 CodeB codeB = new();
+bool isStringCorrect;
 
-if (str == string.Empty)
+
+
+
+do
 {
-    do
+    isStringCorrect = true;
+    foreach (char c in str)
+    {
+        if (!alfabet.Contains(c) && c != ' ')
+        {
+            isStringCorrect = false;
+            break;
+        }        
+    }
+    if (str == string.Empty || !isStringCorrect)
     {
         Console.WriteLine("Вы не ввели строку на русском языке");
         Console.WriteLine("Введите строку на русском языке");
-        str = Console.ReadLine();
-    }
-    while (str == string.Empty);
+        str = Console.ReadLine().ToLower();
+    }        
 }
+while (str == string.Empty || !isStringCorrect);
+
+
 
 //str = codeA.Encoder(str, alfabet);
 //Console.WriteLine(str);

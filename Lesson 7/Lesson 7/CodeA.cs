@@ -25,9 +25,9 @@ namespace Lesson_7
                 {
                     if (result[i] == alfabet[j])
                     {
-                        if (j == 32)
+                        if (j == alfabet.Length - 1)
                         {
-                            charToAppend = 'а';
+                            charToAppend = alfabet[0];
                         }
                         else
                         {
@@ -57,7 +57,7 @@ namespace Lesson_7
                     {
                         if (j == 0)
                         {
-                            charToAppend = 'я';
+                            charToAppend = alfabet[alfabet.Length - 1];
                         }
                         else
                         {
