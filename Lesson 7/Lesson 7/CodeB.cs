@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Lesson_7
 {
@@ -12,14 +8,32 @@ namespace Lesson_7
 
     internal class CodeB : ICoder
     {
-        public string Decoder(string str, char[] alfabet)
-        {
-            throw new NotImplementedException();
-        }
-
         public string Encoder(string str, char[] alfabet)
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+            var result = str.ToCharArray();
+            char charToAppend = ' ';
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                if (result[i].Equals(' '))
+                    sb.Append(' ');
+
+                for (int j = 0; j < alfabet.Length; j++)
+                {
+                    if (result[i] == alfabet[j])
+                    {
+                        charToAppend = alfabet[(alfabet.Length - 1) - j];
+                        sb.Append(charToAppend);
+                    }
+                }
+            }
+            return sb.ToString();
+        }
+
+        public string Decoder(string str, char[] alfabet)
+        {
+            return Encoder(str, alfabet);
         }
     }
 }

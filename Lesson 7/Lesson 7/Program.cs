@@ -15,6 +15,7 @@ Console.WriteLine("Введите строку на русском языке");
 string str = Console.ReadLine().ToLower();
 
 CodeA codeA = new();
+CodeB codeB = new();
 
 if (str == string.Empty)
 {
@@ -27,9 +28,14 @@ if (str == string.Empty)
     while (str == string.Empty);
 }
 
-str = codeA.Encoder(str, alfabet);
+//str = codeA.Encoder(str, alfabet);
+//Console.WriteLine(str);
+//str = codeA.Decoder(str, alfabet);
+//Console.WriteLine(str);
+
+str = codeB.Encoder(str, alfabet);
 Console.WriteLine(str);
-str = codeA.Decoder(str, alfabet);
+str = codeB.Decoder(str, alfabet);
 Console.WriteLine(str);
 
 Console.ReadLine();
